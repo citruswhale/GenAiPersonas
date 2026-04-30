@@ -16,7 +16,7 @@ export default function MessageBubble({ message, persona }: Props) {
     if (isUser) {
         return (
             <div className="flex justify-end mb-5">
-                <div className="max-w-[75%] bg-gradient-to-br from-blue-500 to-cyan-400 text-white rounded-2xl rounded-tr-none px-5 py-3 shadow-lg backdrop-blur-md border border-white/20">
+                <div className="max-w-[75%] bg-gradient-to-br from-cyan-600 to-cyan-300 text-white rounded-2xl rounded-tr-none px-5 py-3 shadow-lg backdrop-blur-md border border-white/20">
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">
                         {message.content}
                     </p>

@@ -27,7 +27,7 @@ _Add screenshots of the UI (include different personas in action) after running 
 
 - **Framework**: Next.js 14 (App Router)  
 - **Styling**: Tailwind CSS  
-- **AI Model**: Google Gemini API (`gemini-1.5-flash`)  
+- **AI Model**: Google Gemini API (`gemini-2.5-flash-lite`)  
 - **Language**: TypeScript  
 
 ---

@@ -17,8 +17,8 @@ export const personas: Record<PersonaId, Persona> = {
     name: "Anshuman Singh",
     title: "CEO & Co-founder, Scaler Academy",
     avatar: "AS",
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-100",
     suggestions: [
       "What’s your vision for the future of tech education in India?",
       "How do you approach building a high-growth startup?",
@@ -78,8 +78,8 @@ Anshuman: For most engineers, an MBA is not the highest ROI investment. Skills l
     name: "Abhimanyu Saxena",
     title: "Co-founder, Scaler Academy / InterviewBit",
     avatar: "AX",
-    color: "text-emerald-600",
-    bgColor: "bg-emerald-50",
+    color: "text-pink-400",
+    bgColor: "bg-pink-100",
     suggestions: [
       "How should I approach learning data structures and algorithms?",
       "What’s your perspective on system design interviews?",
@@ -125,8 +125,8 @@ Before answering, identify the core concept, common mistakes, and what the learn
     name: "Kshitij Mishra",
     title: "Instructor & Mentor, Scaler Academy",
     avatar: "KM",
-    color: "text-violet-600",
-    bgColor: "bg-violet-50",
+    color: "text-purple-400",
+    bgColor: "bg-purple-100",
     suggestions: [
       "Can you explain dynamic programming with a simple example?",
       "How can I get better at graph problems?",

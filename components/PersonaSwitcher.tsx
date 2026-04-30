@@ -3,47 +3,40 @@
 import { Persona, personaList, PersonaId } from "@/lib/personas";
 
 interface Props {
-  active: PersonaId;
-  onChange: (id: PersonaId) => void;
+    active: PersonaId;
+    onChange: (id: PersonaId) => void;
 }
 
 export default function PersonaSwitcher({ active, onChange }: Props) {
-  return (
-      <div className="flex flex-col sm:flex-row gap-2 p-3 bg-white/60 backdrop-blur-lg border-b border-white/20 shadow-sm">
-        {personaList.map((persona: Persona) => (
-            <button
-                key={persona.id}
-                onClick={() => onChange(persona.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all flex-1 justify-center sm:justify-start
-            ${
-                    active === persona.id
-                        ? `${persona.bgColor} ${persona.color} ring-2 ring-white/40 shadow-md scale-[1.02]`
-                        : "bg-white/40 text-gray-600 hover:bg-white/60 backdrop-blur-md"
-                }`}
-            >
-          <span
-              className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0
+    return (
+        <div className="flex bg-gray-100 rounded-xl p-1">
+            {personaList.map((persona: Persona) => {
+                const isActive = active === persona.id;
+
+                return (
+                    <button
+                        key={persona.id}
+                        onClick={() => onChange(persona.id)}
+                        className={`flex items-center gap-2 flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-all
               ${
-                  active === persona.id
-                      ? persona.bgColor
-                      : "bg-gray-300 text-gray-600"
-              }`}
-          >
-            {persona.avatar}
-          </span>
+                            isActive
+                                ? "bg-white shadow-sm text-gray-900"
+                                : "text-gray-500 hover:text-gray-800"
+                        }`}
+                    >
+            <span
+                className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
+                ${isActive ? persona.bgColor : "bg-gray-300 text-gray-600"}`}
+            >
+              {persona.avatar}
+            </span>
 
-              <div className="text-left hidden sm:block">
-                <div className="leading-tight">{persona.name}</div>
-                <div className="text-xs opacity-70 font-normal">
-                  {persona.title.split(",")[0]}
-                </div>
-              </div>
-
-              <div className="sm:hidden">
-                {persona.name.split(" ")[0]}
-              </div>
-            </button>
-        ))}
-      </div>
-  );
+                        <span className="hidden sm:inline">
+              {persona.name.split(" ")[0]}
+            </span>
+                    </button>
+                );
+            })}
+        </div>
+    );
 }
