@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: linear-gradient(135deg, #f5f3ff, #fdf2f8, #ecfeff);
   --foreground: #1a1a1a;
 }
 
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: linear-gradient(135deg, #0f0a1a, #1a0f1a, #001a1a);
-    --foreground: #eaeaea;
-  }
-}
-
 body {
-  background: var(--background);
+  min-height: 100vh;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  background:
+          radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
+          radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.2), transparent 40%),
+          radial-gradient(circle at 50% 100%, rgba(34, 211, 238, 0.2), transparent 40%),
+          linear-gradient(135deg, #f5f3ff, #fdf2f8, #ecfeff);
+
+  background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #eaeaea;
+  }
+
+  body {
+    background:
+            radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15), transparent 40%),
+            radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.15), transparent 40%),
+            radial-gradient(circle at 50% 100%, rgba(34, 211, 238, 0.15), transparent 40%),
+            linear-gradient(135deg, #0f0a1a, #1a0f1a, #001a1a);
+  }
 }

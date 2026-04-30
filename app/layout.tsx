@@ -14,20 +14,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Scaler Persona Chatbot",
-  description: "Chat with AI personas of Scaler Academy leaders — Anshuman Singh, Abhimanyu Saxena, and Kshitij Mishra",
+  description:
+      "Chat with AI personas of Scaler Academy leaders — Anshuman Singh, Abhimanyu Saxena, and Kshitij Mishra",
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+      <html
+          lang="en"
+          className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      >
+      <body className="min-h-screen flex items-center justify-center px-3 sm:px-6 py-6">
+
+      {/* 🧊 Glass container */}
+      <div className="w-full max-w-4xl h-[92vh] flex flex-col
+          bg-white/60 dark:bg-white/10
+          backdrop-blur-xl
+          border border-white/20
+          rounded-2xl
+          shadow-[0_10px_40px_rgba(0,0,0,0.15)]
+          overflow-hidden">
+
+        {children}
+
+      </div>
+
+      </body>
+      </html>
   );
 }

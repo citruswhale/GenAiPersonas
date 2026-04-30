@@ -1,5 +1,9 @@
 import ChatInterface from "@/components/ChatInterface";
 
 export default function Home() {
-  return <ChatInterface />;
+  return (
+      <main className="flex-1 flex flex-col overflow-hidden">
+        <ChatInterface />
+      </main>
+  );
 }
